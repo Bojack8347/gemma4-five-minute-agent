@@ -36,14 +36,4 @@ Every number in the paper is tied, in `docs/IMPLEMENTATION.md`, to a run folder 
 
 The scripts expect the competition harness (`swegemma`) and its data in the layout the notes describe (section 3); neither is redistributed here. Training ran on one NVIDIA GB10 (121 GiB unified memory); the notes give memory figures for each step.
 
-## Not included
 
-The organisers' harness, docker images and public task data; model weights; traces and patches of the runs (available on request); credentials.
-
-## License
-
-Code: [to be chosen by the author]. The task sets derive from the repositories listed in `tasks/README.md` and remain under their licenses. The adapter in `assets/` is a derivative of Gemma 4 and is subject to the Gemma Terms of Use.
-
-## Citation
-
-[to be added with the author block]
