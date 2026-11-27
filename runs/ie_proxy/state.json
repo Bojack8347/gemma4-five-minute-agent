@@ -1,0 +1,47 @@
+{
+ "alpha": 0.13,
+ "draws": [
+  {
+   "x": 0.0,
+   "run": "runs/heldout_hard_terse_base_c8",
+   "prior": true
+  },
+  {
+   "x": 1.0,
+   "run": "runs/heldout_hard_base_c8",
+   "prior": true
+  },
+  {
+   "x": 0.5,
+   "run": "runs/proxy_f050_base_c8"
+  },
+  {
+   "x": 0.0,
+   "run": "runs/proxy_f000_base_c8"
+  },
+  {
+   "x": 0.25,
+   "run": "runs/proxy_f025_base_c8"
+  }
+ ],
+ "iterates": [
+  {
+   "n": 76,
+   "x": 0.5,
+   "status": "drawn",
+   "M": 0.27631578947368424,
+   "k": 21,
+   "residual": -0.14631578947368423,
+   "raw_next": -0.2413333333333335
+  },
+  {
+   "n": 152,
+   "x": 0.0,
+   "status": "converged_at_bound",
+   "M": 0.17105263157894737,
+   "k": 26,
+   "residual": -0.04105263157894737,
+   "raw_next": -0.20800000000000002
+  }
+ ]
+}

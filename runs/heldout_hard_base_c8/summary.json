@@ -1,0 +1,83 @@
+{
+  "total_tasks": 76,
+  "resolved": 28,
+  "resolution_rate": 0.3684,
+  "by_repo": {
+    "jd/tenacity": {
+      "total": 10,
+      "resolved": 7,
+      "rate": 0.7
+    },
+    "getsentry/responses": {
+      "total": 2,
+      "resolved": 2,
+      "rate": 1.0
+    },
+    "jpadilla/pyjwt": {
+      "total": 5,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "wntrblm/nox": {
+      "total": 4,
+      "resolved": 1,
+      "rate": 0.25
+    },
+    "hgrecco/pint": {
+      "total": 8,
+      "resolved": 1,
+      "rate": 0.125
+    },
+    "pyparsing/pyparsing": {
+      "total": 6,
+      "resolved": 3,
+      "rate": 0.5
+    },
+    "scrapy/w3lib": {
+      "total": 3,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "simonw/sqlite-utils": {
+      "total": 8,
+      "resolved": 1,
+      "rate": 0.125
+    },
+    "pydantic/pydantic-settings": {
+      "total": 3,
+      "resolved": 1,
+      "rate": 0.3333333333333333
+    },
+    "mahmoud/boltons": {
+      "total": 7,
+      "resolved": 2,
+      "rate": 0.2857142857142857
+    },
+    "msiemens/tinydb": {
+      "total": 2,
+      "resolved": 1,
+      "rate": 0.5
+    },
+    "executablebooks/markdown-it-py": {
+      "total": 6,
+      "resolved": 2,
+      "rate": 0.3333333333333333
+    },
+    "pydantic/pydantic-extra-types": {
+      "total": 8,
+      "resolved": 6,
+      "rate": 0.75
+    },
+    "more-itertools/more-itertools": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "python-jsonschema/jsonschema": {
+      "total": 3,
+      "resolved": 1,
+      "rate": 0.3333333333333333
+    }
+  },
+  "errors": 37
+}

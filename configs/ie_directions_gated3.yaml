@@ -1,0 +1,42 @@
+# Round 2 of iE over the directions: the same knobs, but (a) a merit gate on resolution,
+# (b) targets set where the measured responses say they are attainable, and (c) every draw on
+# the fixed dev24 set, so the gate compares like with like against the known noise floor
+# (resolution 10/24 and 9/24; see IMPLEMENTATION.md 6.11, 6.17, 6.21 for why all three).
+# The Jacobian and whitening are copied from round 1 (runs/ie_directions/state.json).
+name: directions_gated3
+base_submission: submissions/v0_long
+task_pool: data/dev24.txt
+batch_size: 24
+seed: 0
+
+eval:
+  max_time_minutes: 34
+  concurrency: 8
+  max_turns: 250
+  max_tool_calls: 100
+
+directions:
+  - {name: format,   path: adapters_out/format_r16_v2}
+  - {name: decisive, path: adapters_out/decisive_r16}
+
+knobs:
+  - {name: w_format,   kind: adapter_weight, direction: format,   x0: 1.0, bounds: [0.5, 2.0],  probe_step: -0.5, trust: 0.4}
+  - {name: w_decisive, kind: adapter_weight, direction: decisive, x0: 0.0, bounds: [-1.0, 1.5], probe_step: 1.0,  trust: 0.4}
+  - {name: temperature, kind: sampling, key: temperature,         x0: 0.2, bounds: [0.1, 0.8],  probe_step: 0.4,  trust: 0.2}
+
+targets:
+  - {coord: garbled_call_rate,    value: 0.005}
+  - {coord: repeat_loop_rate,     value: 0.02}
+  - {coord: source_edit_rate,     value: 0.85}
+  - {coord: first_edit_s_kaggle,  value: 200}
+  - {coord: compactions_per_task, value: 1.0}
+  - {coord: empty_patch_rate,     value: 0.10}
+
+gate:
+  coord: resolution_rate
+  min_delta: -0.10      # about two tasks on 24: the per-draw noise of the resolution rate
+
+gain:
+  P: 1.0
+  beta: 0.6
+  rcond: 0.1

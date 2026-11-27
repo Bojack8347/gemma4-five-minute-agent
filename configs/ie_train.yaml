@@ -1,0 +1,70 @@
+# iE as the outer loop of DPO (IMPLEMENTATION.md 6.36): each draw retrains one adapter on a weighted
+# mixture of the format and hindsight (decisiveness) pairs and evaluates it on a fixed 24-task subset of
+# the title-only hard set, the leaderboard-matched proxy. Knobs are training settings: the two source
+# weights and the early-stop margin (how far to push the DPO margin before stopping). The statement
+# pairs are left out: two thirds of them carry no statement signal (6.31) and their direction had no
+# useful effect (6.32).
+name: train_mix
+base_submission: submissions/v0_long
+task_pool: data/heldout_hard_terse/sound_tasks.txt
+data_dir: data/heldout_hard_terse
+batch_size: 24
+seed: 0
+
+sources:
+  format:   {path: data/pairs/format_pairs.jsonl}
+  decisive: {path: data/pairs/decisive_hindsight_pairs.jsonl}
+
+train:
+  max_contexts_per_source: 30     # a fixed seeded sample per source, the same in every retrain
+  context_seed: 0
+  max_pairs_per_context: 2
+  epochs: 2                       # the stop margin usually ends training inside the first
+  max_prompt_tokens: 4096
+  max_completion_tokens: 768
+  chunk: 96
+  grad_accum: 2
+  lr: 1.0e-5
+  nll_weight: 0.2
+  sanity_tokens: 1024
+  min_steps: 8
+
+knobs:
+  - {name: w_format,    kind: source_weight, source: format,   x0: 1.0, bounds: [0.1, 4.0], scale: log, probe_step: -0.69, trust: 0.5}
+  - {name: w_decisive,  kind: source_weight, source: decisive, x0: 1.0, bounds: [0.1, 4.0], scale: log, probe_step: -0.69, trust: 0.5}
+  - {name: stop_margin, kind: train_arg, arg: stop-margin,     x0: 1.5, bounds: [0.8, 3.0], scale: log, probe_step: 0.47,  trust: 0.3}
+
+# targets on the title-only hard set (base: garbled 0.047, loops 0.145, first edit 241 s, empty 0.197,
+# compactions 1.01); set where the directions' measured responses say they are attainable. Each is a
+# ceiling (side: max): the probe showed a retrain already below three of them, and an equality target
+# would have had the first step push malformed calls and loops back up (6.36).
+targets:
+  - {coord: garbled_call_rate,    value: 0.01, side: max}
+  - {coord: repeat_loop_rate,     value: 0.03, side: max}
+  - {coord: first_edit_s_kaggle,  value: 200,  side: max}
+  - {coord: empty_patch_rate,     value: 0.12, side: max}
+  - {coord: compactions_per_task, value: 1.0,  side: max}
+
+# floors on the whitening spread (transformed scale: logits for rates, log for the first edit)
+sigma_floor: {garbled_call_rate: 0.35, repeat_loop_rate: 0.35, first_edit_s_kaggle: 0.15, empty_patch_rate: 0.35, compactions_per_task: 0.10}
+
+gate:
+  coord: resolution_rate
+  min_delta: -0.10      # about two tasks on 24
+
+gain:
+  P: 1.0
+  beta: 0.6
+  rcond: 0.1
+
+# base-like agents on the batch, for whitening and the gate reference (the first is the base agent)
+noise_runs:
+  - runs/heldout_hard_terse_base_c8
+  - runs/heldout_hard_terse_v4_c8
+  - runs/heldout_hard_terse_v6_c8
+
+eval:
+  max_time_minutes: 34
+  concurrency: 8
+  max_turns: 250
+  max_tool_calls: 100

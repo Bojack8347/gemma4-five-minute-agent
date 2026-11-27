@@ -1,0 +1,38 @@
+{
+  "total_tasks": 24,
+  "resolved": 0,
+  "resolution_rate": 0.0,
+  "by_repo": {
+    "jd/tenacity": {
+      "total": 7,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "getsentry/responses": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "wntrblm/nox": {
+      "total": 3,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "scrapy/w3lib": {
+      "total": 2,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "pydantic/pydantic-settings": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "pylint-dev/astroid": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    }
+  },
+  "errors": 0
+}

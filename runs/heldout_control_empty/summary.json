@@ -1,0 +1,68 @@
+{
+  "total_tasks": 120,
+  "resolved": 9,
+  "resolution_rate": 0.075,
+  "by_repo": {
+    "jd/tenacity": {
+      "total": 10,
+      "resolved": 1,
+      "rate": 0.1
+    },
+    "getsentry/responses": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "jpadilla/pyjwt": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "wntrblm/nox": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "hgrecco/pint": {
+      "total": 10,
+      "resolved": 1,
+      "rate": 0.1
+    },
+    "pyparsing/pyparsing": {
+      "total": 10,
+      "resolved": 4,
+      "rate": 0.4
+    },
+    "scrapy/w3lib": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "simonw/sqlite-utils": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "pydantic/pydantic-settings": {
+      "total": 10,
+      "resolved": 1,
+      "rate": 0.1
+    },
+    "mahmoud/boltons": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "msiemens/tinydb": {
+      "total": 10,
+      "resolved": 2,
+      "rate": 0.2
+    },
+    "pylint-dev/astroid": {
+      "total": 10,
+      "resolved": 0,
+      "rate": 0.0
+    }
+  },
+  "errors": 0
+}

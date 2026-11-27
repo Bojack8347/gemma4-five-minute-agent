@@ -1,0 +1,48 @@
+{
+  "total_tasks": 21,
+  "resolved": 1,
+  "resolution_rate": 0.0476,
+  "by_repo": {
+    "wntrblm/nox": {
+      "total": 6,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "hgrecco/pint": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "scrapy/w3lib": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "pydantic/pydantic-settings": {
+      "total": 7,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "executablebooks/markdown-it-py": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "scrapy/parsel": {
+      "total": 2,
+      "resolved": 1,
+      "rate": 0.5
+    },
+    "lark-parser/lark": {
+      "total": 1,
+      "resolved": 0,
+      "rate": 0.0
+    },
+    "pydantic/pydantic-extra-types": {
+      "total": 2,
+      "resolved": 0,
+      "rate": 0.0
+    }
+  },
+  "errors": 0
+}

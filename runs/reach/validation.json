@@ -1,0 +1,206 @@
+{
+ "rows": [
+  {
+   "case": "format 1 vs base",
+   "stat": "malformed",
+   "fixed": -0.0075,
+   "se": 0.005327224413839435,
+   "coord": "garbled_call_rate",
+   "agent_from": 0.049521903204975556,
+   "agent_to": 0.00428071444738655,
+   "agree": null
+  },
+  {
+   "case": "format 1 vs base",
+   "stat": "repeat",
+   "fixed": 0.009166666666666667,
+   "se": 0.007767734530728612,
+   "coord": "repeat_loop_rate",
+   "agent_from": 0.115,
+   "agent_to": 0.015,
+   "agree": null
+  },
+  {
+   "case": "format 1 vs base",
+   "stat": "edit",
+   "fixed": 0.005,
+   "se": 0.005653995933067892,
+   "coord": "edit_attempt_rate",
+   "agent_from": 0.8200000000000001,
+   "agent_to": 0.77,
+   "agree": null
+  },
+  {
+   "case": "format 1 vs base",
+   "stat": "edit",
+   "fixed": 0.005,
+   "se": 0.005653995933067892,
+   "coord": "empty_patch_rate",
+   "agent_from": 0.14500000000000002,
+   "agent_to": 0.175,
+   "agree": null
+  },
+  {
+   "case": "format 1 vs base",
+   "stat": "tokens",
+   "fixed": -11.790833333333333,
+   "se": 6.285250813193173,
+   "coord": "tokens_per_turn",
+   "agent_from": 119.5,
+   "agent_to": 111.0,
+   "agree": null
+  },
+  {
+   "case": "decisiveness +1 vs format 1",
+   "stat": "malformed",
+   "fixed": 0.0025,
+   "se": 0.004000592208112141,
+   "coord": "garbled_call_rate",
+   "agent_from": 0.01164294954721863,
+   "agent_to": 0.001886974411726887,
+   "agree": null
+  },
+  {
+   "case": "decisiveness +1 vs format 1",
+   "stat": "repeat",
+   "fixed": -0.011666666666666667,
+   "se": 0.005743656931443301,
+   "coord": "repeat_loop_rate",
+   "agent_from": 0.0,
+   "agent_to": 0.0,
+   "agree": null
+  },
+  {
+   "case": "decisiveness +1 vs format 1",
+   "stat": "edit",
+   "fixed": 0.0075,
+   "se": 0.005582686446493858,
+   "coord": "edit_attempt_rate",
+   "agent_from": 0.75,
+   "agent_to": 0.875,
+   "agree": null
+  },
+  {
+   "case": "decisiveness +1 vs format 1",
+   "stat": "edit",
+   "fixed": 0.0075,
+   "se": 0.005582686446493858,
+   "coord": "empty_patch_rate",
+   "agent_from": 0.25,
+   "agent_to": 0.08333333333333333,
+   "agree": null
+  },
+  {
+   "case": "decisiveness +1 vs format 1",
+   "stat": "tokens",
+   "fixed": 8.554166666666667,
+   "se": 6.661371516634339,
+   "coord": "tokens_per_turn",
+   "agent_from": 104.0,
+   "agent_to": 106.25,
+   "agree": null
+  },
+  {
+   "case": "decisiveness -0.5 vs format 1",
+   "stat": "malformed",
+   "fixed": 0.005,
+   "se": 0.0033263583657963634,
+   "coord": "garbled_call_rate",
+   "agent_from": 0.01164294954721863,
+   "agent_to": 0.0013003165988240614,
+   "agree": null
+  },
+  {
+   "case": "decisiveness -0.5 vs format 1",
+   "stat": "repeat",
+   "fixed": -0.0016666666666666668,
+   "se": 0.00472093781032889,
+   "coord": "repeat_loop_rate",
+   "agent_from": 0.0,
+   "agent_to": 0.041666666666666664,
+   "agree": null
+  },
+  {
+   "case": "decisiveness -0.5 vs format 1",
+   "stat": "edit",
+   "fixed": -0.0016666666666666668,
+   "se": 0.00500742666580872,
+   "coord": "edit_attempt_rate",
+   "agent_from": 0.75,
+   "agent_to": 0.7291666666666666,
+   "agree": null
+  },
+  {
+   "case": "decisiveness -0.5 vs format 1",
+   "stat": "edit",
+   "fixed": -0.0016666666666666668,
+   "se": 0.00500742666580872,
+   "coord": "empty_patch_rate",
+   "agent_from": 0.25,
+   "agent_to": 0.1875,
+   "agree": null
+  },
+  {
+   "case": "decisiveness -0.5 vs format 1",
+   "stat": "tokens",
+   "fixed": 12.0925,
+   "se": 6.535811643703728,
+   "coord": "tokens_per_turn",
+   "agent_from": 104.0,
+   "agent_to": 109.5,
+   "agree": null
+  },
+  {
+   "case": "statement 1 vs base",
+   "stat": "malformed",
+   "fixed": -0.002232142857142857,
+   "se": 0.0022321428571428575,
+   "coord": "garbled_call_rate",
+   "agent_from": 0.04671078240560529,
+   "agent_to": 0.023264831329972858,
+   "agree": null
+  },
+  {
+   "case": "statement 1 vs base",
+   "stat": "repeat",
+   "fixed": -0.022321428571428572,
+   "se": 0.013054940496048165,
+   "coord": "repeat_loop_rate",
+   "agent_from": 0.14473684210526316,
+   "agent_to": 0.07894736842105263,
+   "agree": null
+  },
+  {
+   "case": "statement 1 vs base",
+   "stat": "edit",
+   "fixed": -0.0033482142857142855,
+   "se": 0.00535979057861023,
+   "coord": "edit_attempt_rate",
+   "agent_from": 0.7894736842105263,
+   "agent_to": 0.7763157894736842,
+   "agree": null
+  },
+  {
+   "case": "statement 1 vs base",
+   "stat": "edit",
+   "fixed": -0.0033482142857142855,
+   "se": 0.00535979057861023,
+   "coord": "empty_patch_rate",
+   "agent_from": 0.19736842105263158,
+   "agent_to": 0.19736842105263158,
+   "agree": null
+  },
+  {
+   "case": "statement 1 vs base",
+   "stat": "tokens",
+   "fixed": 28.987723214285715,
+   "se": 7.34304017449318,
+   "coord": "tokens_per_turn",
+   "agent_from": 124.5,
+   "agent_to": 114.0,
+   "agree": false
+  }
+ ],
+ "hits": 0,
+ "calls": 1
+}

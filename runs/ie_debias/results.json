@@ -1,0 +1,154 @@
+[
+ {
+  "family": "public100",
+  "tasks": 100,
+  "tau": 6.0,
+  "configs": [
+   "gated end point",
+   "base",
+   "format direction"
+  ],
+  "observed": [
+   0.33,
+   0.345,
+   0.38
+  ],
+  "debiased": [
+   0.3384809599146278,
+   0.3384809599146278,
+   0.3790280387140812
+  ],
+  "se": [
+   0.01933196774614634,
+   0.018376341453853078,
+   0.019103858316041965
+  ],
+  "iterations": 100,
+  "final_residual": 0.003306253108382229,
+  "sd_top_minus_base": 0.02402149164750263,
+  "expected_best_if_equal": 0.35435750302374364,
+  "sd_best_if_equal": 0.01790864692472031,
+  "expected_diff_two_base_draws": 11.110340366089416,
+  "observed_diff_two_base_draws": 11
+ },
+ {
+  "family": "public100_pair",
+  "tasks": 100,
+  "tau": 6.0,
+  "configs": [
+   "base",
+   "format direction"
+  ],
+  "observed": [
+   0.345,
+   0.38
+  ],
+  "debiased": [
+   0.345,
+   0.38
+  ],
+  "se": [
+   0.019976447864096376,
+   0.020620473133331294
+  ],
+  "iterations": 1,
+  "final_residual": 0.0008987473536282709,
+  "sd_top_minus_base": 0.024908211696863424,
+  "expected_best_if_equal": 0.3544487525984645,
+  "sd_best_if_equal": 0.018413916448092378,
+  "expected_diff_two_base_draws": 11.530845912019071,
+  "observed_diff_two_base_draws": 11
+ },
+ {
+  "family": "hard76_title",
+  "tasks": 76,
+  "tau": 4.0,
+  "configs": [
+   "thinking off + format",
+   "base",
+   "tools",
+   "tools + guidance",
+   "statement-distilled",
+   "trajectory imitation"
+  ],
+  "observed": [
+   0.05263157894736842,
+   0.17105263157894737,
+   0.17105263157894737,
+   0.17105263157894737,
+   0.17105263157894737,
+   0.17105263157894737
+  ],
+  "debiased": [
+   0.05277172443250553,
+   0.17124444708827352,
+   0.17124444708827352,
+   0.17124444708827352,
+   0.17124444708827352,
+   0.17124444708827352
+  ],
+  "se": [
+   0.020472263465792985,
+   0.018971521527791625,
+   0.01709057290827797,
+   0.017047115271509317,
+   0.017678033730838552,
+   0.020585587361082146
+  ],
+  "iterations": 100,
+  "final_residual": 0.028977633260582614,
+  "sd_top_minus_base": 0.03522188354770178,
+  "expected_best_if_equal": 0.20276118598431347,
+  "sd_best_if_equal": 0.02010090962606877,
+  "expected_diff_two_base_draws": 7.21521729222039,
+  "observed_diff_two_base_draws": null
+ },
+ {
+  "family": "dev24",
+  "tasks": 24,
+  "tau": 5.0,
+  "configs": [
+   "knob controller end point",
+   "decisiveness A",
+   "gated end point",
+   "format direction",
+   "decisiveness B",
+   "base",
+   "directions end point (ungated)"
+  ],
+  "observed": [
+   0.3125,
+   0.35416666666666663,
+   0.3541666666666667,
+   0.375,
+   0.375,
+   0.39583333333333337,
+   0.39583333333333337
+  ],
+  "debiased": [
+   0.36606652112997123,
+   0.36606652112997123,
+   0.36606652112997123,
+   0.36606652112997123,
+   0.36606652112997123,
+   0.36606652112997123,
+   0.36606652112997123
+  ],
+  "se": [
+   0.03205931000502464,
+   0.026403095497577987,
+   0.024897821311452763,
+   0.0244149437730658,
+   0.024725021524841063,
+   0.02614191604217176,
+   0.03144497826240213
+  ],
+  "iterations": 100,
+  "final_residual": 0.02879062577250102,
+  "sd_top_minus_base": 0.058092004531913835,
+  "expected_best_if_equal": 0.4246239591058344,
+  "sd_best_if_equal": 0.03144497826240213,
+  "expected_diff_two_base_draws": 3.8763995720263162,
+  "observed_diff_two_base_draws": 3
+ }
+]

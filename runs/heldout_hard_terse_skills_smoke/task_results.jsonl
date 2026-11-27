@@ -1,0 +1,4 @@
+{"instance_id": "tenacity_741", "repo": "jd/tenacity", "resolved": true, "agent_patch_size": 693, "test_exit_code": 0, "duration_seconds": 1036.29, "error": null, "tool_calls": 15, "total_llm_calls": 23, "task_index": 1}
+{"instance_id": "tenacity_645", "repo": "jd/tenacity", "resolved": true, "agent_patch_size": 1108, "test_exit_code": 0, "duration_seconds": 718.19, "error": null, "tool_calls": 15, "total_llm_calls": 19, "task_index": 2}
+{"instance_id": "tenacity_694", "repo": "jd/tenacity", "resolved": false, "agent_patch_size": 780, "test_exit_code": 1, "duration_seconds": 1515.55, "error": null, "tool_calls": 42, "total_llm_calls": 45, "task_index": 3}
+{"instance_id": "tenacity_682", "repo": "jd/tenacity", "resolved": false, "agent_patch_size": 5930, "test_exit_code": 2, "duration_seconds": 1637.05, "error": null, "tool_calls": 46, "total_llm_calls": 48, "task_index": 4}

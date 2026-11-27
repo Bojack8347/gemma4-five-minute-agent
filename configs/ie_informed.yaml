@@ -1,0 +1,64 @@
+# The informed agent as the target (IMPLEMENTATION.md 6.41). alpha is not hand-set: it is the behaviour
+# vector the base agent measured with full statements on the 76 sound hard tasks (runs/heldout_hard_base_c8).
+# M(x) is the same agent on the same tasks with title-only statements, at knob values x. The question is
+# which of the informed agent's coordinates any weighting of the trained directions, or the thinking
+# budget, can reach from the title-only side. Every draw is on all 76 tasks (common random tasks); the
+# probe base and two of the columns come from existing runs, so the probe draws only the decisiveness and
+# thinking-budget columns.
+name: informed
+base_submission: submissions/v0_long
+task_pool: data/heldout_hard_terse/sound_tasks.txt
+batch_size: 76
+seed: 0
+data_dir: data/heldout_hard_terse
+runner: run_eval_v2.py
+python: .venv-heldout/bin/python
+harness_pythonpath: data/harness_v2_site
+
+eval:
+  max_time_minutes: 34
+  concurrency: 8
+  max_turns: 250
+  max_tool_calls: 100
+
+directions:
+  - {name: decisive,  path: adapters_out/decisive_r16}
+  - {name: traj,      path: adapters_out/traj_r16}
+  - {name: statement, path: adapters_out/statement_r16}
+
+probe_base_from:
+  - runs/heldout_hard_terse_base_c8
+  - runs/proxy_f000_base_c8          # the title-only replicate drawn by the proxy calibration (6.40)
+
+knobs:
+  - {name: w_decisive, kind: adapter_weight, direction: decisive, x0: 0.0, bounds: [-1.0, 1.5], probe_step: 1.0, trust: 0.5}
+  - {name: w_traj, kind: adapter_weight, direction: traj, x0: 0.0, bounds: [-1.0, 2.0], probe_step: 1.0, trust: 0.5,
+     probe_from: runs/heldout_hard_terse_v6_c8}
+  - {name: w_statement, kind: adapter_weight, direction: statement, x0: 0.0, bounds: [-1.0, 2.0], probe_step: 1.0, trust: 0.5,
+     probe_from: runs/heldout_hard_terse_v4_c8}
+  - {name: thinking_budget, kind: sampling, key: thinking_config.thinking_budget, scale: log, integer: true,
+     x0: 512, bounds: [128, 2048], probe_step: 0.6931, trust: 0.5}
+
+# alpha: measured on the informed run; equalities on the edit coordinates, ceilings on time and format.
+targets_from_run: runs/heldout_hard_base_c8
+targets:
+  - {coord: source_edit_rate}
+  - {coord: wrong_edit_rate}
+  - {coord: empty_patch_rate}
+  - {coord: first_edit_s_kaggle, side: max}
+  - {coord: garbled_call_rate,   side: max}
+  - {coord: repeat_loop_rate,    side: max}
+
+gate:
+  coord: resolution_rate
+  min_delta: -0.06      # about 4.5 tasks on 76, one per-draw binomial sd of the title-only rate
+
+gain:
+  P: 1.0
+  beta: 0.6
+  rcond: 0.1
+
+jacobian:
+  refit: true
+  min_runs: 6
+  ridge: 1.0

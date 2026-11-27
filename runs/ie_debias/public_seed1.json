@@ -1,0 +1,58 @@
+[
+ {
+  "family": "public100",
+  "tasks": 100,
+  "tau": 6.0,
+  "configs": [
+   "gated end point",
+   "base",
+   "format direction"
+  ],
+  "observed": [
+   0.33,
+   0.345,
+   0.38
+  ],
+  "debiased": [
+   0.33834272058121395,
+   0.33834272058121395,
+   0.3784175460338595
+  ],
+  "se": [
+   0.019384043137948632,
+   0.018440880502361576,
+   0.019208394063119295
+  ],
+  "iterations": 100,
+  "final_residual": 0.0033345030128956177,
+  "expected_best_if_equal": 0.35439900289922954,
+  "expected_diff_two_base_draws": 11.106848932081206,
+  "observed_diff_two_base_draws": 11
+ },
+ {
+  "family": "public100_pair",
+  "tasks": 100,
+  "tau": 6.0,
+  "configs": [
+   "base",
+   "format direction"
+  ],
+  "observed": [
+   0.345,
+   0.38
+  ],
+  "debiased": [
+   0.345,
+   0.38
+  ],
+  "se": [
+   0.019908262975171353,
+   0.020676149928274122
+  ],
+  "iterations": 1,
+  "final_residual": 0.0008517494313418639,
+  "expected_best_if_equal": 0.35464500235244634,
+  "expected_diff_two_base_draws": 11.530845912019071,
+  "observed_diff_two_base_draws": 11
+ }
+]

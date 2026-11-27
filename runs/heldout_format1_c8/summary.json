@@ -1,0 +1,63 @@
+{
+  "total_tasks": 95,
+  "resolved": 56,
+  "resolution_rate": 0.5895,
+  "by_repo": {
+    "jd/tenacity": {
+      "total": 9,
+      "resolved": 8,
+      "rate": 0.8888888888888888
+    },
+    "getsentry/responses": {
+      "total": 9,
+      "resolved": 9,
+      "rate": 1.0
+    },
+    "jpadilla/pyjwt": {
+      "total": 10,
+      "resolved": 5,
+      "rate": 0.5
+    },
+    "wntrblm/nox": {
+      "total": 7,
+      "resolved": 5,
+      "rate": 0.7142857142857143
+    },
+    "hgrecco/pint": {
+      "total": 9,
+      "resolved": 6,
+      "rate": 0.6666666666666666
+    },
+    "pyparsing/pyparsing": {
+      "total": 6,
+      "resolved": 3,
+      "rate": 0.5
+    },
+    "scrapy/w3lib": {
+      "total": 9,
+      "resolved": 1,
+      "rate": 0.1111111111111111
+    },
+    "simonw/sqlite-utils": {
+      "total": 10,
+      "resolved": 5,
+      "rate": 0.5
+    },
+    "pydantic/pydantic-settings": {
+      "total": 8,
+      "resolved": 1,
+      "rate": 0.125
+    },
+    "mahmoud/boltons": {
+      "total": 10,
+      "resolved": 6,
+      "rate": 0.6
+    },
+    "msiemens/tinydb": {
+      "total": 8,
+      "resolved": 7,
+      "rate": 0.875
+    }
+  },
+  "errors": 24
+}
